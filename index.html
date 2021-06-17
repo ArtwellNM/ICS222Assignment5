@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<title>Assignment 5 tables</title>
+ <link href="Zebrastripe.css" rel="stylesheet" type="text/css" /> 
+
+</head<body>
+
+<table id = "table1" style="width:20%">
+	<tr>
+  <tr>
+    <th>Name</th>
+    <th>Bounces</th>		
+  </tr>
+  <tr>
+    <td>Tendai</td>	
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Kudzai</td>		
+    <td>13</td>
+  </tr>
+  <tr>
+    <td>Taurai</td>	
+    <td>3</td>
+  </tr>
+  <tr>
+  	<td>Nyika</td>
+  	<td>1000</td>
+  </tr>
+  </table>
+
+<table id="table2" style="width:27.2%">
+	<tr>
+	<th>Name</th>
+	<th>Favourite Dish</th>
+	</tr>
+	<tr>
+		<td>Tendai</td>
+		<td>Sadza Madora</td>
+	</tr>
+	<tr>
+		<td>Kudzai</td>
+		<td>Sadza Chicken</td>
+	</tr>
+<tr>
+	<td >Taurai</td>
+	<td>Gango</td>
+	</tr>
+	</tr>
+</table>
+	</tr>
+</table>
+
+</div>
+	<tr></tr>
+	<br>
+	<br>
+ <div class="row">
+<button type = "button" id = "Btn">Change </button>
+ </div>
+
+
+<script>
+	let button = document.getElementById("Btn");
+        // listen for a click event on the button
+        button.addEventListener('click', ()=>{
+            var tbl_inf = document.getElementsByTagName("table");
+            let tbl_num = tbl_inf.length; 
+            // traversing through the tables
+            let tbl_index = 0;
+            while(tbl_index < tbl_num){
+                let table = tbl_inf[tbl_index].getElementsByTagName('tr'); 
+                let row_count = 0;
+                for(row_count =0; row_count< table.length; row_count+=2){
+                    table[row_count].style.background = "black";
+                    table[row_count].style.color= "white";
+                }
+                tbl_index+=1;
+                 }
+           
+        });
+
+    </script> 
+	
+</body>
+</html>
